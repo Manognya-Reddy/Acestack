@@ -1,0 +1,24 @@
+#intro{
+    margin-top: 80px;
+    margin-left: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+
+}
+#left-part{
+    width: 50%;
+}
+#feature-heading{
+    text-align: center;
+    padding: 50px;
+}
+#cards-block{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
