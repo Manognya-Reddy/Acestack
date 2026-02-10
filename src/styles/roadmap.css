@@ -1,0 +1,63 @@
+.roadmap-container {
+  background: #E9EEF4;
+  min-height: 100vh;
+  padding: 30px;
+  color: black;
+}
+
+.roadmap-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.roadmap-tab {
+  padding: 10px 18px;
+  background: #F4F7FB;
+  border: 1px solid #C8D2DF;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.roadmap-tab:hover {
+  background: #E9EEF4;
+}
+
+.roadmap-tab.active {
+  background: #2F4F7F;
+  color: white;
+  border: none;
+}
+
+.roadmap-canvas {
+  background: #F4F7FB;
+  height: 75vh;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #C8D2DF;
+}
+
+.react-flow__node {
+  border-radius: 10px;
+  border: 1px solid #C8D2DF;
+  background: #F4F7FB;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.react-flow__node.selected {
+  border: 2px solid #2F4F7F;
+}
+
+.react-flow__edge-path {
+  stroke: #9AA9BF;
+  stroke-width: 2;
+}
+
+.react-flow__controls button {
+  background: #F4F7FB;
+  border: none;
+}

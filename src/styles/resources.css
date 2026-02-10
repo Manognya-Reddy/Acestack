@@ -1,0 +1,18 @@
+.resources-page {
+  background: #E9EEF4;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.resources-title {
+  text-align: center;
+  color: #1F2A3A;
+  margin-bottom: 30px;
+}
+
+.resources-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
