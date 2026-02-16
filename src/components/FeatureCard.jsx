@@ -9,9 +9,9 @@ export default function FeatureCard({title,text,image}){
                 <p className="card-text">
                     {text}
                 </p>
-                <a className="btn btn-primary">
+                <button className="btn btn-primary">
                     Click Here
-                </a>
+                </button>
             </div>
         </div>
     );
