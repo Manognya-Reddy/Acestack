@@ -71,7 +71,7 @@ export default function Flashcards() {
         <div className="header">
           <h1>Interactive Flashcards</h1>
           <p>Practice and reinforce your knowledge</p>
-        </div>                                                                                                                                                                                                                                            
+        </div>
         <div className="category-bar">
           <button
             className={
@@ -99,33 +99,24 @@ export default function Flashcards() {
             </button>
           ))}
         </div>
+        <div
+          className="flashcard-container"
+          onClick={() => setIsFlipped(!isFlipped)}
+        >
+          <div className={`flashcard-inner ${isFlipped ? "flipped" : ""}`}>
+            <div className="flashcard-face flashcard-front">
+              <span className="badge">{currentCard.category}</span>
+              <p className="card-text">{currentCard.question}</p>
+              <p className="hint">Click to reveal answer</p>
+            </div>
+            <div className="flashcard-face flashcard-back">
+              <span className="badge">{currentCard.category}</span>
+              <p className="card-text">{currentCard.answer}</p>
+              <p className="hint">Click to see question</p>
+            </div>
+          </div>
+        </div>
 
-        {/* Flashcard */}
-<div
-  className="flashcard-container"
-  onClick={() => setIsFlipped(!isFlipped)}
->
-  <div className={`flashcard-inner ${isFlipped ? "flipped" : ""}`}>
-    
-    {/* Front */}
-    <div className="flashcard-face flashcard-front">
-      <span className="badge">{currentCard.category}</span>
-      <p className="card-text">{currentCard.question}</p>
-      <p className="hint">Click to reveal answer</p>
-    </div>
-
-    {/* Back */}
-    <div className="flashcard-face flashcard-back">
-      <span className="badge">{currentCard.category}</span>
-      <p className="card-text">{currentCard.answer}</p>
-      <p className="hint">Click to see question</p>
-    </div>
-
-  </div>
-</div>
-
-
-        {/* Controls */}
         <div className="controls">
           <button onClick={prevCard} className="btn">
             <ChevronLeft size={18} />

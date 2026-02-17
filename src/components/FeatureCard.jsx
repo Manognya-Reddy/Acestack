@@ -1,18 +1,19 @@
-import React from 'react'
-import '../styles/cards.css';
-export default function FeatureCard({title,text,image}){
-    return (
-        <div className="card" style={{ width: "18rem" }}>
-            <img className="card-img-top" src={image} alt="Card" />
-            <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-                <p className="card-text">
-                    {text}
-                </p>
-                <button className="btn btn-primary">
-                    Click Here
-                </button>
-            </div>
-        </div>
-    );
+import React from "react";
+import "../styles/featurecard.css";
+
+export default function FeatureCard({ title, text, image, onClick, buttonColor }) {
+  return (
+    <div className="feature-card">
+      <img src={image} alt={title} className="feature-image" />
+      <h3>{title}</h3>
+      <p>{text}</p>
+      <button
+        className="feature-btn"
+        style={{ backgroundColor: buttonColor }}
+        onClick={onClick}
+      >
+        Explore
+      </button>
+    </div>
+  );
 }

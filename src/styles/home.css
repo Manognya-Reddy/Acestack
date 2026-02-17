@@ -1,38 +1,31 @@
-#intro {
-  margin-left: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+#homepage {
+  background-color: #E9EEF4;
   font-family: 'Inter', sans-serif;
 }
 
-#homepage {
-  background-color: #E9EEF4;
+#intro {
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
 }
 
 #left-part {
   width: 50%;
 }
-#right-part{
-    padding: 20px;
-    margin-top: 100px;
-    border-radius: 50px;
-}
 
-#feature-heading {
-  text-align: center;
-  padding: 50px;
+#left-part h1 {
+  font-size: 2.6rem;
   color: #1F2A3A;
 }
 
-#cards-block {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 100px;
+#left-part h4 {
+  margin-top: 15px;
+  color: #333;
+  line-height: 1.5;
 }
+
 .hero-subtext {
   margin-top: 12px;
   font-size: 1rem;
@@ -41,25 +34,53 @@
 }
 
 .hero-cta {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   gap: 12px;
 }
 
+#right-part {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#right-part img {
+  width: 600px;
+  border-radius: 20px;
+}
+
 .primary-btn {
-  background: #111;
+  background-color: #4A6FA5;
   color: white;
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .secondary-btn {
-  background: transparent;
-  border: 1px solid #111;
+  background-color: transparent;
+  border: 1px solid #4A6FA5;
+  color: #4A6FA5;
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
 }
 
+#feature-heading {
+  text-align: center;
+  padding: 60px 0 30px;
+  color: #1F2A3A;
+  font-size: 2rem;
+}
+
+#cards-block {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 80px 100px;
+  flex-wrap: wrap;
+}
