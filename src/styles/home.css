@@ -1,6 +1,7 @@
 #homepage {
   background-color: #E9EEF4;
   font-family: 'Inter', sans-serif;
+  padding-top: 40px;
 }
 
 #intro {
@@ -51,23 +52,37 @@
 }
 
 .primary-btn {
-  background-color: #4A6FA5;
+  background: rgba(74, 111, 165, 0.95);
   color: white;
   border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(74, 111, 165, 0.25);
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  background-color: #2F4F7F;
 }
 
 .secondary-btn {
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
   border: 1px solid #4A6FA5;
   color: #4A6FA5;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: 0.2s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  background-color: rgba(74, 111, 165, 0.08);
 }
 
 #feature-heading {
