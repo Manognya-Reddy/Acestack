@@ -23,8 +23,6 @@
   position: relative;
   text-align: center;
 }
-
-/* headings */
 .auth-modal h2 {
   color: #1F2A3A;
   margin-bottom: 8px;
@@ -35,8 +33,6 @@
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
-
-/* inputs */
 .auth-modal input {
   width: 100%;
   padding: 10px;
@@ -50,8 +46,6 @@
 .auth-modal input:focus {
   border-color: #4A6FA5;
 }
-
-/* buttons */
 .full {
   width: 100%;
   margin-top: 10px;

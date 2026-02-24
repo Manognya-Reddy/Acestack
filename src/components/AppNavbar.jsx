@@ -9,6 +9,7 @@ export default function Navbar() {
                 <li><Link to="/roadmap">Roadmap</Link></li>
                 <li><Link to="/flashcards">Flashcards</Link></li>
                 <li><Link to="/resources">Resources</Link></li>
+                <li><Link to="/profile">👤</Link></li>
             </ul>
         </div>
     );

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Roadmap from "./pages/Roadmap";
 import Flashcards from "./pages/Flashcards";
 import Resources from "./pages/Resources";
+import Profile from "./pages/Profile";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
          <Route path="/roadmap" element={<Roadmap/>} />
          <Route path="/flashcards" element={<Flashcards/>} />
          <Route path="/resources" element={<Resources/>} />
+         <Route path="/profile" element={<Profile/>} />
      </Routes>
     </BrowserRouter>
   );

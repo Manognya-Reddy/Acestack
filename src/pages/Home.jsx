@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/home.css'
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
@@ -8,10 +8,29 @@ import FeatureCard from '../components/FeatureCard';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import AuthModal from '../components/AuthModal';
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function Home() {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handlePrimaryClick = () => {
+    if (user) {
+      navigate('/flashcards');
+    } else {
+      setShowModal(true);
+    }
+  };
 
   return (
     <div id="homepage">
@@ -43,9 +62,9 @@ export default function Home() {
           <div className="hero-cta">
             <button
               className="primary-btn"
-              onClick={() => setShowModal(true)}
+              onClick={handlePrimaryClick}
             >
-              Get Started
+              {user ? "Start Preparing" : "Get Started"}
             </button>
 
             <button
@@ -89,7 +108,6 @@ export default function Home() {
           buttonColor="#4A6FA5"
         />
       </div>
-
       <Footer />
     </div>
   );
